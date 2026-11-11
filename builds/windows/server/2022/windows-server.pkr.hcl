@@ -12,11 +12,11 @@
 //  The Packer configuration.
 
 packer {
-  required_version = ">= 1.16.0"
+  required_version = ">= 1.16.2"
   required_plugins {
     vsphere = {
       source  = "github.com/vmware/vsphere"
-      version = ">= 2.5.0"
+      version = ">= 2.5.1"
     }
     git = {
       source  = "github.com/ethanmdavidson/git"

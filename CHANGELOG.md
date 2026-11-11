@@ -6,6 +6,12 @@
 
 **Bug Fix**:
 
+- Quotes the Ansible username on the Windows Server 2019 build.
+  [#1174](https://github.com/vmware/packer-examples-for-vsphere/pull/1174)
+- Removes the Red Hat Enterprise Linux 7 job from the CI configuration.
+  [#1173](https://github.com/vmware/packer-examples-for-vsphere/pull/1173)
+- Sets `communicator_port` to a number on the Rocky Linux 9 and 10 builds.
+  [#1172](https://github.com/vmware/packer-examples-for-vsphere/pull/1172)
 - Prevents a duplicate `disable_vmware_customization` key in `cloud.cfg`.
   [#1123](https://github.com/vmware/packer-examples-for-vsphere/pull/1123)
 - Replaces deprecated `gateway4` with `routes` in the Ubuntu cloud-init network
@@ -50,36 +56,56 @@
 
 **Chore**:
 
+- Passes `network.pkrvars.hcl` on the SUSE Linux Enterprise Server GitLab CI job.
+  [#1180](https://github.com/vmware/packer-examples-for-vsphere/pull/1180)
+- Renames the Red Hat Subscription Manager catalog key from `rshm` to `rhsm`.
+  [#1179](https://github.com/vmware/packer-examples-for-vsphere/pull/1179)
+- Updates the Windows Server editions in the documentation to Standard and Datacenter.
+  [#1178](https://github.com/vmware/packer-examples-for-vsphere/pull/1178)
+- Updates the Oracle Linux 10 example guest operating system type to `oracleLinux9_64Guest`.
+  [#1177](https://github.com/vmware/packer-examples-for-vsphere/pull/1177)
+- Updates the Windows image names in the FAQ to Windows 11.
+  [#1175](https://github.com/vmware/packer-examples-for-vsphere/pull/1175)
+- Updates the build and download examples to Ubuntu Server 26.04.
+  [#1176](https://github.com/vmware/packer-examples-for-vsphere/pull/1176)
 - Updates the tested platform versions to include VMware vSphere 9.1, 9.0, and
   8.0 Update 3h or later.
   [#1083](https://github.com/vmware/packer-examples-for-vsphere/pull/1083),
   [#1150](https://github.com/vmware/packer-examples-for-vsphere/pull/1150)
-- Updates the tested operating system requirements to VMware Photon OS 5.0
-  (`amd64`), Ubuntu Server 26.04 (`amd64`), and macOS Tahoe (`arm64`).
+- Updates the tested operating system requirements to Ubuntu Server 26.04
+  (`amd64`) and macOS 27 (Golden Gate) and 26 (Tahoe) (`arm64`).
   [#1083](https://github.com/vmware/packer-examples-for-vsphere/pull/1083),
-  [#1150](https://github.com/vmware/packer-examples-for-vsphere/pull/1150)
+  [#1150](https://github.com/vmware/packer-examples-for-vsphere/pull/1150),
+  [#1159](https://github.com/vmware/packer-examples-for-vsphere/pull/1159),
+  [#1161](https://github.com/vmware/packer-examples-for-vsphere/pull/1161)
 - Updates the Packer plugin and Terraform provider for VMware vSphere from the
   `hashicorp/vsphere` namespace to `vmware/vsphere`.
   [#1100](https://github.com/vmware/packer-examples-for-vsphere/pull/1100),
   [#1101](https://github.com/vmware/packer-examples-for-vsphere/pull/1101)
-- Updates Ansible `community.general` collection to `12.4.0`.
+- Updates Ansible `community.general` collection to `14.0.0`.
   [#1108](https://github.com/vmware/packer-examples-for-vsphere/pull/1108),
-  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097)
-- Updates Ansible `ansible.posix` collection to `2.1.0`.
-  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097)
-- Updates Ansible `ansible.windows` collection to `3.3.0`.
-  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097)
-- Updates Ansible `chocolatey.chocolatey` collection to `1.5.3`.
-  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097)
+  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097),
+  [#1160](https://github.com/vmware/packer-examples-for-vsphere/pull/1160)
+- Updates Ansible `ansible.posix` collection to `2.2.2`.
+  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097),
+  [#1160](https://github.com/vmware/packer-examples-for-vsphere/pull/1160)
+- Updates Ansible `ansible.windows` collection to `3.9.2`.
+  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097),
+  [#1160](https://github.com/vmware/packer-examples-for-vsphere/pull/1160)
+- Updates Ansible `chocolatey.chocolatey` collection to `1.6.0`.
+  [#1097](https://github.com/vmware/packer-examples-for-vsphere/pull/1097),
+  [#1160](https://github.com/vmware/packer-examples-for-vsphere/pull/1160)
 - Updates `chocolatey` to `2.6.0`.
   [#1109](https://github.com/vmware/packer-examples-for-vsphere/pull/1109)
-- Updates `required_versions` for `packer` to `>= 1.16.0`.
+- Updates `required_versions` for `packer` to `>= 1.16.2`.
   [#1107](https://github.com/vmware/packer-examples-for-vsphere/pull/1107),
-  [#1135](https://github.com/vmware/packer-examples-for-vsphere/pull/1135)
-- Updates `required_plugins` for `packer-plugin-vsphere` to `>= 2.5.0`.
+  [#1135](https://github.com/vmware/packer-examples-for-vsphere/pull/1135),
+  [#1163](https://github.com/vmware/packer-examples-for-vsphere/pull/1163)
+- Updates `required_plugins` for `packer-plugin-vsphere` to `>= 2.5.1`.
   [#1077](https://github.com/vmware/packer-examples-for-vsphere/pull/1077),
   [#1106](https://github.com/vmware/packer-examples-for-vsphere/pull/1106),
-  [#1136](https://github.com/vmware/packer-examples-for-vsphere/pull/1136)
+  [#1136](https://github.com/vmware/packer-examples-for-vsphere/pull/1136),
+  [#1156](https://github.com/vmware/packer-examples-for-vsphere/pull/1156)
 - Updates `required_versions` for `packer-plugin-ansible` to >= `1.1.6`.
   [#1078](https://github.com/vmware/packer-examples-for-vsphere/pull/1078),
   [#1137](https://github.com/vmware/packer-examples-for-vsphere/pull/1137)
@@ -90,6 +116,14 @@
 - Updates `required_versions` for `vmware/vsphere` to `>= 2.17.1`.
   [#1102](https://github.com/vmware/packer-examples-for-vsphere/pull/1102),
   [#1153](https://github.com/vmware/packer-examples-for-vsphere/pull/1153)
+- Updates `required_versions` for `hashicorp/hcp` to `~> 0.115.0`.
+  [#1155](https://github.com/vmware/packer-examples-for-vsphere/pull/1155)
+- Updates `required_versions` for `terraform` to `>= 1.16.0`.
+  [#1165](https://github.com/vmware/packer-examples-for-vsphere/pull/1165)
+- Updates `required_versions` for `git` to `>= 2.53.0`.
+  [#1168](https://github.com/vmware/packer-examples-for-vsphere/pull/1168)
+- Updates Gomplate to `>= 5.3.1`.
+  [#1158](https://github.com/vmware/packer-examples-for-vsphere/pull/1158)
 - Updates Ubuntu 24.04 LTS to 24.04.5 release.
   [#1131](https://github.com/vmware/packer-examples-for-vsphere/pull/1131),
   [#1099](https://github.com/vmware/packer-examples-for-vsphere/pull/1099),
@@ -168,6 +202,8 @@
   [#1076](https://github.com/vmware/packer-examples-for-vsphere/pull/1076)
 - Removes additional packages from the `chocolatey` package lists.
   [#1109](https://github.com/vmware/packer-examples-for-vsphere/pull/1109)
+- Removes VMware Photon OS from the tested operating systems.
+  [#1161](https://github.com/vmware/packer-examples-for-vsphere/pull/1161)
 
 ## v0.22.1
 
